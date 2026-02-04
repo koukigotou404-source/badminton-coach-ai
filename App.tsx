@@ -126,7 +126,7 @@ const App: React.FC = () => {
                     </svg>
                   </div>
                   <h3 className="text-lg font-bold text-black mb-2">AI自動構成</h3>
-                  <p className="text-black text-sm">「AIにおまかせ」機能を使えば、あなたのライブラリを解析して練習メニューを数秒で作成します。</p>
+                  <p className="text-black text-sm">「AIにおまかせ」機能を使えば、あなたのライブラリをしっかり解析して練習メニューを数秒で作成します。</p>
                 </div>
               </div>
             )}
