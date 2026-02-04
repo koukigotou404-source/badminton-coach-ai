@@ -73,7 +73,7 @@ const App: React.FC = () => {
           
           <div className="text-center space-y-4 mb-8">
             <h2 className="text-3xl md:text-4xl font-extrabold text-black">
-              バドミントン練習プラン作成ツール
+              バドミントン練習プランツール
             </h2>
             <p className="text-lg text-black max-w-2xl mx-auto font-medium">
               自分だけのドリルライブラリを構築し、
