@@ -5,13 +5,6 @@ export enum SkillLevel {
   ADVANCED = '上級',
 }
 
-export enum PlayerCount {
-  SOLO = '1人 (自主練)',
-  PAIR = '2人',
-  SMALL_GROUP = '3-4人',
-  LARGE_GROUP = '5人以上',
-}
-
 export enum FocusArea {
   FOOTWORK = 'フットワーク',
   NET_PLAY = 'ネットプレー',
@@ -21,21 +14,28 @@ export enum FocusArea {
   ALL_ROUND = '総合練習',
 }
 
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  avatar?: string;
+}
+
 export interface Drill {
   name: string;
   duration: number;
   description: string;
   keyPoints: string[];
   category?: FocusArea;
-  level?: string; // ドリルごとの推奨レベル
+  level?: string;
   videoUrl?: string;
 }
 
 export interface PracticeMenu {
   title: string;
-  level?: string; // メニュー全体の対象レベル
+  level?: string;
   totalDuration: number;
-  intensityScore: number; // 1 to 10
+  intensityScore: number;
   drills: Drill[];
   coachingAdvice: string;
   intensityDistribution: {
@@ -47,7 +47,7 @@ export interface PracticeMenu {
 export interface PracticeSettings {
   levels: string[];
   players: number;
-  duration: number; // minutes
+  duration: number;
   focusAreas: FocusArea[];
   courts: number;
 }
