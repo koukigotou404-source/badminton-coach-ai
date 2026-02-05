@@ -44,6 +44,34 @@ export interface PracticeMenu {
   }[];
 }
 
+export interface SavedMenu extends PracticeMenu {
+  id: string;
+  savedAt: number;
+}
+
+export interface Friend {
+  id: string;
+  name: string;
+  email: string;
+  avatar?: string;
+  status: 'online' | 'offline';
+}
+
+export interface ChatAttachment {
+  type: 'menu' | 'drill';
+  data: any;
+}
+
+export interface Message {
+  id: string;
+  senderId: string;
+  receiverId: string;
+  text?: string;
+  attachment?: ChatAttachment;
+  timestamp: number;
+  isRead: boolean;
+}
+
 export interface PracticeSettings {
   levels: string[];
   players: number;
